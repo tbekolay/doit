@@ -81,6 +81,7 @@ setup(name = 'doit',
       extras_require={
           ':sys.platform == "darwin"': ['macfsevents'],
           ':sys.platform == "linux"': ['pyinotify'],
+          ':sys.platform == "win32"': ['multiprocess'],
       },
       long_description = long_description,
       entry_points = {

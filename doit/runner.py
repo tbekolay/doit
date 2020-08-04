@@ -1,6 +1,9 @@
 """Task runner"""
 
-from multiprocessing import Process, Queue as MQueue
+try:
+    from multiprocess import Process, Queue as MQueue
+except ImportError:
+    from multiprocessing import Process, Queue as MQueue
 from threading import Thread
 import pickle
 import queue

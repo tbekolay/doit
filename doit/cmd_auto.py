@@ -4,7 +4,10 @@ automatically execute tasks when file dependencies change"""
 import os
 import time
 import sys
-from multiprocessing import Process
+try:
+    from multiprocess import Process
+except ImportError:
+    from multiprocessing import Process
 from subprocess import call
 
 from .exceptions import InvalidCommand

@@ -1,5 +1,8 @@
 import time
-from multiprocessing import Process
+try:
+    from multiprocess import Process
+except ImportError:
+    from multiprocessing import Process
 
 import pytest
 

@@ -1,6 +1,9 @@
 import os
 import pickle
-from multiprocessing import Queue
+try:
+    from multiprocess import Queue
+except ImportError:
+    from multiprocessing import Queue
 import platform
 from unittest.mock import Mock
 
